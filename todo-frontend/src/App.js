@@ -4,15 +4,16 @@ function App() {
   const [name, setName] = useState('');
   const [tasks, setTasks] = useState([]);
 
-  // useEffect(() => {
-  //   async () => {
-  //     const response = await fetch('http://localhost:8000/tasks');
+  useEffect(
+    () => async () => {
+      const response = await fetch('http://localhost:8000/tasks');
 
-  //     const content = await response.json();
+      const content = await response.json();
 
-  //     setTasks(content);
-  //   };
-  // }, []);
+      setTasks(content);
+    },
+    []
+  );
 
   const create = async (e) => {
     e.preventDefault();
