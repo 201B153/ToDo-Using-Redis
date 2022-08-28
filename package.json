@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "cd todo-backend && npm install  && cd ../todo-frontend && npm install && npm run build",
-    "start": "node todo-backend/index.js",
+    "start": "node todo-backend/src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
