@@ -1,0 +1,22 @@
+{
+  "name": "redis_todo",
+  "version": "1.0.0",
+  "description": "Simple ToDo-App which shows how redis-om  works as db. # Have to add screenshots by tonight. [Insert app screenshots](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#uploading-assets)",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd todo-backend && npm install  && cd ../todo-frontend && npm install && npm run build",
+    "start": "node todo-backend/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/201B153/ToDo-Using-Redis.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/201B153/ToDo-Using-Redis/issues"
+  },
+  "homepage": "https://github.com/201B153/ToDo-Using-Redis#readme"
+}

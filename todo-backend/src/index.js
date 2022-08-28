@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import 'dotenv/config';
+import path from 'path';
 import { Client, Repository } from 'redis-om';
 import { taskSchema } from './schema/task.schema.js';
 
@@ -51,6 +52,16 @@ app.delete('/tasks/:id', async (req, res) => {
   await taskRepository.remove(req.params.id);
 
   res.send(null);
+});
+
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, '/todo-frontend/build')));
+app.get('*', (req, res) =>
+  res.sendFile(path.join(__dirname, '/todo-frontend/build/index.html'))
+);
+
+app.use((err, req, res, next) => {
+  res.status(500).send({ message: err.message });
 });
 
 app.listen(process.env.PORT || 8000, () => {
