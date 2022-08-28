@@ -13,7 +13,8 @@ app.use(
 
 const client = new Client();
 await client.open(
-  'redis://admin:Mayanksingh1@@redis-15145.c212.ap-south-1-1.ec2.cloud.redislabs.com:15145'
+  'redis://admin:Mayanksingh1@@redis-15145.c212.ap-south-1-1.ec2.cloud.redislabs.com:15145',
+  console.log("db connected")
 );
 
 const taskRepository = new Repository(taskSchema, client);
@@ -22,7 +23,7 @@ await taskRepository.dropIndex();
 await taskRepository.createIndex();
 
 app.get('/', async (req, res) => {
-  res.send('hello');
+  res.send('Hello Homepage');
 });
 
 app.get('/tasks', async (req, res) => {
