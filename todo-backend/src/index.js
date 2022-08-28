@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from 'cors';
+import 'dotenv/config';
 import { Client, Repository } from 'redis-om';
 import { taskSchema } from './schema/task.schema.js';
 
@@ -12,10 +13,7 @@ app.use(
 );
 
 const client = new Client();
-await client.open(
-  'redis://admin:Mayanksingh1@@redis-15145.c212.ap-south-1-1.ec2.cloud.redislabs.com:15145',
-  console.log("db connected")
-);
+await client.open(process.env.REDIS_URL, console.log('db connected'));
 
 const taskRepository = new Repository(taskSchema, client);
 
@@ -55,4 +53,6 @@ app.delete('/tasks/:id', async (req, res) => {
   res.send(null);
 });
 
-app.listen(8000);
+app.listen(process.env.PORT || 8000, () => {
+  console.log("Backend server is running!");
+});
