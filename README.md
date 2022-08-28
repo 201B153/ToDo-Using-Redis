@@ -1,8 +1,8 @@
 # ToDo-App Using Redis-Om
 
 Simple ToDo-App which shows how redis-om  works as db.
-# Have to add screenshots by tonight.
-[Insert app screenshots](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#uploading-assets)
+
+![screenshots](todo-frontend/public/images/Screenshot%202022-08-28%20154844.jpg)
 
 ## How it works
 
@@ -58,11 +58,11 @@ To make deploys work, you need to create free account on [Redis Cloud](https://r
 
 ### Heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://todo-redis.herokuapp.com/)
 
 ### Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/redis-developer/basic-analytics-dashboard-redis-bitmaps-nodejs&env=REDIS_ENDPOINT_URI,REDIS_PASSWORD)
+[![Deploy with Vercel](https://vercel.com/button)](https://to-do-using-redis-67quhj4m9-201b153.vercel.app/)
 ## More Information about Redis Stack
 
 Here some resources to help you quickly get started using Redis Stack. 
